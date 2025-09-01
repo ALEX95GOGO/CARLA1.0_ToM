@@ -31,7 +31,7 @@ rm CARLA_0.9.13.tar.gz AdditionalMaps_0.9.13.tar.gz
 cd ..
 ```
 
-## Install the Python API (adjust py3.7 if your Python differs; check the dist/ folder)
+## Install the Python API
 ```Shell
 easy_install carla/PythonAPI/carla/dist/carla-0.9.13-py3.7-linux-x86_64.egg
 # (Alternatively) python3 -m pip install carla/PythonAPI/carla/dist/carla-0.9.13-py3.7-linux-x86_64.egg
