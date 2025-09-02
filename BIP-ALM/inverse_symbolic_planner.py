@@ -108,9 +108,9 @@ def main(args):
     acc_list = []
 
     # Prepare tokenizer and model
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, token="REDACTED", add_bos_token = False)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, token="", add_bos_token = False)
     tokenizer.pad_token_id = tokenizer.eos_token_id
-    model = AutoModelForCausalLM.from_pretrained(args.model_name_or_path, load_in_8bit=False, device_map={"": 0}, token="REDACTED")
+    model = AutoModelForCausalLM.from_pretrained(args.model_name_or_path, load_in_8bit=False, device_map={"": 0}, token="")
     if args.load_lora:
         model = PeftModel.from_pretrained(model, args.lora_name_or_path, device_map={"": 0})
     model.eval()
